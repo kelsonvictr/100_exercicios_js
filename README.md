@@ -1,3 +1,5 @@
+## Praticar JS puro: (100 questões)
+
 1 - Crie um script que tenha três variáveis:
 ```js
 var nome;
@@ -237,4 +239,106 @@ const numeros = Array.from({ length: 100 }, (_, index) => index + 1);
 
 100 - Crie um script que declare uma função que receba um array de números como parâmetro e retorne um novo array contendo apenas os números que são divisíveis por 10.
 
-Vou gerar o PDF com todas essas questões.
+## Manipulação da DOM (HTML + JS) (50 questões)
+
+Claro, aqui estão 50 exercícios com maior complexidade, envolvendo condicionais, loops, funções e manipulação de DOM, baseados nos assuntos trabalhados anteriormente:
+
+1. Crie uma página que calcule a média de quatro notas inseridas pelo usuário. Exiba se o aluno foi aprovado (média >= 7) ou reprovado (média < 7).
+
+2. Crie uma página que verifique se um número é primo. O usuário deve inserir um número e a página deve exibir se ele é primo ou não.
+
+3. Crie uma página que gere um número aleatório entre 1 e 100 e permita que o usuário tente adivinhar. Informe se a tentativa é maior, menor ou igual ao número gerado.
+
+4. Crie uma página que calcule a soma dos números de 1 a N, onde N é um valor inserido pelo usuário.
+
+5. Crie uma página que exiba a tabuada de um número inserido pelo usuário, utilizando loops.
+
+6. Crie uma página que receba uma lista de nomes e exiba o nome mais longo e o mais curto.
+
+7. Crie uma página que calcule o fatorial de um número inserido pelo usuário.
+
+8. Crie uma página que simule o lançamento de dois dados e exiba o resultado da soma. Adicione um botão para lançar novamente.
+
+9. Crie uma página que receba um texto e conte o número de vogais e consoantes.
+
+10. Crie uma página que converta um valor de decimal para binário.
+
+11. Crie uma página que calcule a sequência de Fibonacci até um número N inserido pelo usuário.
+
+12. Crie uma página que verifique se uma palavra é um palíndromo.
+
+13. Crie uma página que ordene uma lista de números inseridos pelo usuário.
+
+14. Crie uma página que encontre o maior e o menor número em uma lista de números inseridos pelo usuário.
+
+15. Crie uma página que verifique se um número é perfeito (igual à soma de seus divisores próprios).
+
+16. Crie uma página que exiba os números pares e ímpares de 1 a N, onde N é inserido pelo usuário.
+
+17. Crie uma página que simule uma calculadora com operações básicas e avançadas (potenciação e raiz quadrada).
+
+18. Crie uma página que receba uma lista de produtos e preços, calcule o total e aplique um desconto baseado em uma condição (por exemplo, desconto de 10% se o total for maior que 100).
+
+19. Crie uma página que calcule o tempo necessário para um investimento dobrar de valor com base em uma taxa de juros anual inserida pelo usuário.
+
+20. Crie uma página que simule um jogo de adivinhar números com múltiplas tentativas e dê dicas para o usuário.
+
+21. Crie uma página que receba a data de nascimento do usuário e calcule sua idade exata.
+
+22. Crie uma página que receba uma lista de nomes e os exiba em ordem alfabética.
+
+23. Crie uma página que simule um sistema de login. Verifique se o nome de usuário e a senha estão corretos.
+
+24. Crie uma página que receba um array de números e calcule a média, mediana e moda.
+
+25. Crie uma página que gere uma senha aleatória com base em um comprimento inserido pelo usuário.
+
+26. Crie uma página que receba uma frase e conte o número de palavras.
+
+27. Crie uma página que converta um valor de binário para decimal.
+
+28. Crie uma página que receba um valor de temperatura em Celsius e converta para Kelvin e Fahrenheit.
+
+29. Crie uma página que receba uma lista de números e exiba apenas os números primos.
+
+30. Crie uma página que simule um sistema de votação. O usuário pode votar em diferentes opções e o resultado é exibido ao final.
+
+31. Crie uma página que receba um número e exiba sua representação em números romanos.
+
+32. Crie uma página que exiba a série de números primos até um valor N inserido pelo usuário.
+
+33. Crie uma página que calcule o MDC (Máximo Divisor Comum) de dois números inseridos pelo usuário.
+
+34. Crie uma página que receba um texto e substitua todas as ocorrências de uma palavra por outra.
+
+35. Crie uma página que simule um sistema de caixa eletrônico. O usuário insere um valor e a página exibe a quantidade de notas de cada valor necessário para totalizar o valor inserido.
+
+36. Crie uma página que verifique se um CPF inserido é válido.
+
+37. Crie uma página que receba uma lista de nomes e permita que o usuário busque por um nome específico, exibindo se ele está na lista ou não.
+
+38. Crie uma página que receba um valor em reais e converta para dólares, euros e libras com base em taxas de câmbio fixas.
+
+39. Crie uma página que receba um número e exiba sua decomposição em fatores primos.
+
+40. Crie uma página que simule um cronômetro com funções de iniciar, parar e resetar.
+
+41. Crie uma página que receba uma lista de preços e calcule o preço médio, o maior e o menor preço.
+
+42. Crie uma página que receba uma lista de temperaturas e exiba a maior, a menor e a média das temperaturas.
+
+43. Crie uma página que calcule a velocidade média de um percurso com base no tempo e na distância inseridos pelo usuário.
+
+44. Crie uma página que receba um número e exiba todos os seus divisores.
+
+45. Crie uma página que receba um array de números e exiba os números em ordem decrescente.
+
+46. Crie uma página que simule um formulário de contato com validação de campos obrigatórios.
+
+47. Crie uma página que receba uma lista de notas e exiba a maior, a menor e a média das notas.
+
+48. Crie uma página que receba um texto e conte a frequência de cada letra.
+
+49. Crie uma página que receba um número e exiba seu valor absoluto.
+
+50. Crie uma página que receba uma data e exiba o dia da semana correspondente.
