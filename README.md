@@ -241,7 +241,7 @@ const numeros = Array.from({ length: 100 }, (_, index) => index + 1);
 
 ## Manipulação da DOM (HTML + JS) (50 questões)
 
-Claro, aqui estão 50 exercícios com maior complexidade, envolvendo condicionais, loops, funções e manipulação de DOM, baseados nos assuntos trabalhados anteriormente:
+50 exercícios com maior complexidade, envolvendo condicionais, loops, funções e manipulação de DOM, baseados nos assuntos trabalhados anteriormente:
 
 1. Crie uma página que calcule a média de quatro notas inseridas pelo usuário. Exiba se o aluno foi aprovado (média >= 7) ou reprovado (média < 7).
 
