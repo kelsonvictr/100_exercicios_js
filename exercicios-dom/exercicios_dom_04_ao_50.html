@@ -1,0 +1,1210 @@
+<!-- EXERCÍCIO 04: Soma de 1 até N -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 04 - Soma de 1 até N</title>
+</head>
+<body>
+  <h2>Soma de 1 até N</h2>
+  <input type="number" id="valorN" placeholder="Digite um número">
+  <button onclick="somar()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function somar() {
+      const n = parseInt(document.getElementById("valorN").value)
+      let soma = 0
+      for (let i = 1; i <= n; i++) soma += i
+      document.getElementById("resultado").innerText = `Soma: ${soma}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 05: Tabuada -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 05 - Tabuada</title>
+</head>
+<body>
+  <h2>Tabuada</h2>
+  <input type="number" id="numero" placeholder="Digite um número">
+  <button onclick="gerarTabuada()">Exibir</button>
+  <ul id="tabuada"></ul>
+  <script>
+    function gerarTabuada() {
+      const num = parseInt(document.getElementById("numero").value)
+      const tabuadaEl = document.getElementById("tabuada")
+      tabuadaEl.innerHTML = ""
+      for (let i = 1; i <= 10; i++) {
+        const item = document.createElement("li")
+        item.innerText = `${num} x ${i} = ${num * i}`
+        tabuadaEl.appendChild(item)
+      }
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 06: Nome mais curto e mais longo -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 06 - Nome mais curto e mais longo</title>
+</head>
+<body>
+  <h2>Ver Nome Mais Curto e Mais Longo</h2>
+  <textarea id="nomes" placeholder="Digite os nomes separados por vírgula"></textarea><br>
+  <button onclick="verificarNomes()">Verificar</button>
+  <p id="resultado"></p>
+  <script>
+    function verificarNomes() {
+      const nomes = document.getElementById("nomes").value.split(",").map(n => n.trim())
+      let maior = nomes[0]
+      let menor = nomes[0]
+      nomes.forEach(nome => {
+        if (nome.length > maior.length) maior = nome
+        if (nome.length < menor.length) menor = nome
+      })
+      document.getElementById("resultado").innerText = `Mais curto: ${menor}, Mais longo: ${maior}`
+    }
+  </script>
+</body>
+</html>
+<!-- EXERCÍCIO 07: Fatorial -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 07 - Fatorial</title>
+</head>
+<body>
+  <h2>Fatorial</h2>
+  <input type="number" id="num" placeholder="Digite um número">
+  <button onclick="calcularFatorial()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function calcularFatorial() {
+      const n = parseInt(document.getElementById("num").value)
+      let f = 1
+      for (let i = 1; i <= n; i++) {
+        f *= i
+      }
+      document.getElementById("resultado").innerText = `Fatorial de ${n} é ${f}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 08: Lançamento de Dados -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 08 - Lançar Dados</title>
+</head>
+<body>
+  <h2>Lançar Dados</h2>
+  <button onclick="jogarDados()">Lançar</button>
+  <p id="resultado"></p>
+  <script>
+    function jogarDados() {
+      const dado1 = Math.floor(Math.random() * 6) + 1
+      const dado2 = Math.floor(Math.random() * 6) + 1
+      const soma = dado1 + dado2
+      document.getElementById("resultado").innerText = `Dado 1: ${dado1}, Dado 2: ${dado2}, Soma: ${soma}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 09: Contar Vogais e Consoantes -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 09 - Contar Vogais e Consoantes</title>
+</head>
+<body>
+  <h2>Contar Vogais e Consoantes</h2>
+  <input type="text" id="texto" placeholder="Digite um texto">
+  <button onclick="contar()">Contar</button>
+  <p id="resultado"></p>
+  <script>
+    function contar() {
+      const texto = document.getElementById("texto").value.toLowerCase()
+      const vogais = texto.match(/[aeiou]/g) || []
+      const consoantes = texto.match(/[bcdfghjklmnpqrstvwxyz]/g) || []
+      document.getElementById("resultado").innerText = `Vogais: ${vogais.length}, Consoantes: ${consoantes.length}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 10: Decimal para Binário -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 10 - Decimal para Binário</title>
+</head>
+<body>
+  <h2>Conversor Decimal para Binário</h2>
+  <input type="number" id="decimal" placeholder="Digite um número decimal">
+  <button onclick="converter()">Converter</button>
+  <p id="resultado"></p>
+  <script>
+    function converter() {
+      const decimal = parseInt(document.getElementById("decimal").value)
+      const binario = decimal.toString(2)
+      document.getElementById("resultado").innerText = `Binário: ${binario}`
+    }
+  </script>
+</body>
+</html>
+<!-- EXERCÍCIO 11: Fibonacci até N -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 11 - Fibonacci até N</title>
+</head>
+<body>
+  <h2>Sequência de Fibonacci até N</h2>
+  <input type="number" id="numero" placeholder="Digite um número">
+  <button onclick="fibonacci()">Gerar</button>
+  <p id="resultado"></p>
+  <script>
+    function fibonacci() {
+      const n = parseInt(document.getElementById("numero").value)
+      let seq = [0, 1]
+      while (seq[seq.length - 1] + seq[seq.length - 2] <= n) {
+        seq.push(seq[seq.length - 1] + seq[seq.length - 2])
+      }
+      document.getElementById("resultado").innerText = seq.join(', ')
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 12: Verificar Palíndromo -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 12 - Palíndromo</title>
+</head>
+<body>
+  <h2>Verificar Palíndromo</h2>
+  <input type="text" id="palavra" placeholder="Digite uma palavra">
+  <button onclick="verificar()">Verificar</button>
+  <p id="resultado"></p>
+  <script>
+    function verificar() {
+      const palavra = document.getElementById("palavra").value.toLowerCase()
+      const invertida = palavra.split('').reverse().join('')
+      const ehPalindromo = palavra === invertida
+      document.getElementById("resultado").innerText = ehPalindromo ? "É palíndromo" : "Não é palíndromo"
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 13: Ordenar Números -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 13 - Ordenar Números</title>
+</head>
+<body>
+  <h2>Ordenar Números</h2>
+  <input type="text" id="numeros" placeholder="Ex: 5,3,8,1">
+  <button onclick="ordenar()">Ordenar</button>
+  <p id="resultado"></p>
+  <script>
+    function ordenar() {
+      const entrada = document.getElementById("numeros").value
+      const lista = entrada.split(",").map(n => parseFloat(n.trim())).sort((a, b) => a - b)
+      document.getElementById("resultado").innerText = `Ordenado: ${lista.join(", ")}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 14: Maior e Menor da Lista -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 14 - Maior e Menor Número</title>
+</head>
+<body>
+  <h2>Maior e Menor Número</h2>
+  <input type="text" id="numeros" placeholder="Digite números separados por vírgula">
+  <button onclick="verificar()">Verificar</button>
+  <p id="resultado"></p>
+  <script>
+    function verificar() {
+      const valores = document.getElementById("numeros").value.split(",").map(n => parseFloat(n.trim()))
+      const maior = Math.max(...valores)
+      const menor = Math.min(...valores)
+      document.getElementById("resultado").innerText = `Maior: ${maior}, Menor: ${menor}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 15: Verificar Número Perfeito -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 15 - Número Perfeito</title>
+</head>
+<body>
+  <h2>Verificar Número Perfeito</h2>
+  <input type="number" id="numero" placeholder="Digite um número">
+  <button onclick="verificar()">Verificar</button>
+  <p id="resultado"></p>
+  <script>
+    function verificar() {
+      const num = parseInt(document.getElementById("numero").value)
+      let soma = 0
+      for (let i = 1; i < num; i++) {
+        if (num % i === 0) soma += i
+      }
+      const resultado = soma === num ? "É perfeito" : "Não é perfeito"
+      document.getElementById("resultado").innerText = resultado
+    }
+  </script>
+</body>
+</html>
+<!-- EXERCÍCIO 16: Exibir Pares e Ímpares até N -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 16 - Pares e Ímpares</title>
+</head>
+<body>
+  <h2>Pares e Ímpares até N</h2>
+  <input type="number" id="numero" placeholder="Digite um número">
+  <button onclick="mostrar()">Mostrar</button>
+  <p id="resultado"></p>
+  <script>
+    function mostrar() {
+      const n = parseInt(document.getElementById("numero").value)
+      const pares = []
+      const impares = []
+      for (let i = 1; i <= n; i++) {
+        i % 2 === 0 ? pares.push(i) : impares.push(i)
+      }
+      document.getElementById("resultado").innerText =
+        `Pares: ${pares.join(", ")}\nÍmpares: ${impares.join(", ")}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 17: Calculadora Completa -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 17 - Calculadora</title>
+</head>
+<body>
+  <h2>Calculadora</h2>
+  <input type="number" id="a" placeholder="Valor A">
+  <input type="number" id="b" placeholder="Valor B">
+  <select id="op">
+    <option value="+">Soma</option>
+    <option value="-">Subtração</option>
+    <option value="*">Multiplicação</option>
+    <option value="/">Divisão</option>
+    <option value="**">Potenciação</option>
+    <option value="raiz">Raiz quadrada de A</option>
+  </select>
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function calcular() {
+      const a = parseFloat(document.getElementById("a").value)
+      const b = parseFloat(document.getElementById("b").value)
+      const op = document.getElementById("op").value
+      let res
+      if (op === "raiz") {
+        res = Math.sqrt(a)
+      } else {
+        res = eval(`${a} ${op} ${b}`)
+      }
+      document.getElementById("resultado").innerText = `Resultado: ${res}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 18: Total com Desconto -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 18 - Total com Desconto</title>
+</head>
+<body>
+  <h2>Total com Desconto</h2>
+  <textarea id="produtos" placeholder="Digite preços separados por vírgula"></textarea><br>
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function calcular() {
+      const precos = document.getElementById("produtos").value.split(",").map(p => parseFloat(p.trim()))
+      const total = precos.reduce((acc, val) => acc + val, 0)
+      const final = total > 100 ? total * 0.9 : total
+      document.getElementById("resultado").innerText = `Total: R$ ${final.toFixed(2)}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 19: Dobrar Investimento com Juros -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 19 - Juros Compostos</title>
+</head>
+<body>
+  <h2>Tempo para Dobrar Investimento</h2>
+  <input type="number" id="taxa" placeholder="Taxa anual (%)">
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function calcular() {
+      const taxa = parseFloat(document.getElementById("taxa").value) / 100
+      let anos = 0
+      let valor = 1
+      while (valor < 2) {
+        valor *= 1 + taxa
+        anos++
+      }
+      document.getElementById("resultado").innerText = `Anos para dobrar: ${anos}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 20: Jogo de Adivinhação com Dicas -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 20 - Adivinhe o Número</title>
+</head>
+<body>
+  <h2>Jogo: Adivinhe o número entre 1 e 100</h2>
+  <input type="number" id="tentativa" placeholder="Digite sua tentativa">
+  <button onclick="jogar()">Tentar</button>
+  <p id="dica"></p>
+  <script>
+    const segredo = Math.floor(Math.random() * 100) + 1
+    function jogar() {
+      const valor = parseInt(document.getElementById("tentativa").value)
+      const msg = valor === segredo ? "Você acertou!" : valor > segredo ? "Muito alto!" : "Muito baixo!"
+      document.getElementById("dica").innerText = msg
+    }
+  </script>
+</body>
+</html>
+<!-- EXERCÍCIO 21: Calcular Idade Exata -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 21 - Calcular Idade</title>
+</head>
+<body>
+  <h2>Calcular Idade</h2>
+  <input type="date" id="nascimento">
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function calcular() {
+      const nascimento = new Date(document.getElementById("nascimento").value)
+      const hoje = new Date()
+      let idade = hoje.getFullYear() - nascimento.getFullYear()
+      const m = hoje.getMonth() - nascimento.getMonth()
+      if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) idade--
+      document.getElementById("resultado").innerText = `Idade: ${idade} anos`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 22: Ordenar Nomes em Ordem Alfabética -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 22 - Ordenar Nomes</title>
+</head>
+<body>
+  <h2>Ordenar Nomes</h2>
+  <textarea id="nomes" placeholder="Digite nomes separados por vírgula"></textarea><br>
+  <button onclick="ordenar()">Ordenar</button>
+  <p id="resultado"></p>
+  <script>
+    function ordenar() {
+      const nomes = document.getElementById("nomes").value.split(",").map(n => n.trim()).sort()
+      document.getElementById("resultado").innerText = nomes.join(", ")
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 23: Sistema de Login Simples -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 23 - Login</title>
+</head>
+<body>
+  <h2>Login</h2>
+  <input type="text" id="usuario" placeholder="Usuário">
+  <input type="password" id="senha" placeholder="Senha">
+  <button onclick="login()">Entrar</button>
+  <p id="resultado"></p>
+  <script>
+    const usuarioCorreto = "admin"
+    const senhaCorreta = "1234"
+
+    function login() {
+      const u = document.getElementById("usuario").value
+      const s = document.getElementById("senha").value
+      const msg = (u === usuarioCorreto && s === senhaCorreta)
+        ? "Login bem-sucedido!" : "Usuário ou senha incorretos."
+      document.getElementById("resultado").innerText = msg
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 24: Média, Mediana e Moda -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 24 - Média, Mediana e Moda</title>
+</head>
+<body>
+  <h2>Média, Mediana e Moda</h2>
+  <input type="text" id="numeros" placeholder="Ex: 1,2,3,4,4,5">
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function calcular() {
+      const arr = document.getElementById("numeros").value.split(",").map(n => parseFloat(n.trim())).sort((a, b) => a - b)
+      const media = arr.reduce((acc, val) => acc + val, 0) / arr.length
+      const meio = Math.floor(arr.length / 2)
+      const mediana = arr.length % 2 === 0 ? (arr[meio - 1] + arr[meio]) / 2 : arr[meio]
+      const contagem = {}
+      arr.forEach(n => contagem[n] = (contagem[n] || 0) + 1)
+      const maxFreq = Math.max(...Object.values(contagem))
+      const moda = Object.keys(contagem).filter(k => contagem[k] === maxFreq).join(", ")
+      document.getElementById("resultado").innerText = `Média: ${media}, Mediana: ${mediana}, Moda: ${moda}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 25: Gerador de Senha Aleatória -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 25 - Gerar Senha</title>
+</head>
+<body>
+  <h2>Gerador de Senha</h2>
+  <input type="number" id="tamanho" placeholder="Tamanho da senha">
+  <button onclick="gerarSenha()">Gerar</button>
+  <p id="senha"></p>
+  <script>
+    function gerarSenha() {
+      const length = parseInt(document.getElementById("tamanho").value)
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*"
+      let senha = ""
+      for (let i = 0; i < length; i++) {
+        senha += chars[Math.floor(Math.random() * chars.length)]
+      }
+      document.getElementById("senha").innerText = `Senha: ${senha}`
+    }
+  </script>
+</body>
+</html>
+<!-- EXERCÍCIO 26: Contar Palavras -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 26 - Contar Palavras</title>
+</head>
+<body>
+  <h2>Contador de Palavras</h2>
+  <textarea id="frase" placeholder="Digite sua frase aqui"></textarea><br>
+  <button onclick="contar()">Contar</button>
+  <p id="resultado"></p>
+  <script>
+    function contar() {
+      const frase = document.getElementById("frase").value.trim()
+      const palavras = frase === "" ? [] : frase.split(/\s+/)
+      document.getElementById("resultado").innerText = `Quantidade de palavras: ${palavras.length}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 27: Binário para Decimal -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 27 - Binário para Decimal</title>
+</head>
+<body>
+  <h2>Conversor Binário para Decimal</h2>
+  <input type="text" id="binario" placeholder="Digite um número binário">
+  <button onclick="converter()">Converter</button>
+  <p id="resultado"></p>
+  <script>
+    function converter() {
+      const bin = document.getElementById("binario").value
+      const dec = parseInt(bin, 2)
+      document.getElementById("resultado").innerText = `Decimal: ${isNaN(dec) ? "Inválido" : dec}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 28: Celsius para Kelvin e Fahrenheit -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 28 - Conversão de Temperatura</title>
+</head>
+<body>
+  <h2>Conversão de Temperatura</h2>
+  <input type="number" id="celsius" placeholder="Temperatura em °C">
+  <button onclick="converter()">Converter</button>
+  <p id="resultado"></p>
+  <script>
+    function converter() {
+      const c = parseFloat(document.getElementById("celsius").value)
+      const k = c + 273.15
+      const f = c * 9/5 + 32
+      document.getElementById("resultado").innerText = `Kelvin: ${k.toFixed(2)} K, Fahrenheit: ${f.toFixed(2)} °F`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 29: Filtrar Números Primos -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 29 - Filtrar Primos</title>
+</head>
+<body>
+  <h2>Filtrar Números Primos</h2>
+  <input type="text" id="numeros" placeholder="Ex: 1,2,3,4,5,6,7">
+  <button onclick="filtrar()">Filtrar</button>
+  <p id="resultado"></p>
+  <script>
+    function ehPrimo(n) {
+      if (n < 2) return false
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false
+      }
+      return true
+    }
+    function filtrar() {
+      const nums = document.getElementById("numeros").value.split(",").map(n => parseInt(n.trim()))
+      const primos = nums.filter(ehPrimo)
+      document.getElementById("resultado").innerText = `Primos: ${primos.join(", ")}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 30: Sistema de Votação -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 30 - Sistema de Votação</title>
+</head>
+<body>
+  <h2>Vote em sua linguagem favorita</h2>
+  <button onclick="votar('JS')">JavaScript</button>
+  <button onclick="votar('Python')">Python</button>
+  <button onclick="votar('Java')">Java</button>
+  <p id="resultado"></p>
+  <script>
+    const votos = { JS: 0, Python: 0, Java: 0 }
+
+    function votar(opcao) {
+      votos[opcao]++
+      document.getElementById("resultado").innerText =
+        `JS: ${votos.JS}, Python: ${votos.Python}, Java: ${votos.Java}`
+    }
+  </script>
+</body>
+</html>
+<!-- EXERCÍCIO 31: Converter número para Romano -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 31 - Converter para Romano</title>
+</head>
+<body>
+  <h2>Converter número para Romano</h2>
+  <input type="number" id="numero" placeholder="Digite um número">
+  <button onclick="converter()">Converter</button>
+  <p id="resultado"></p>
+  <script>
+    function converter() {
+      let n = parseInt(document.getElementById("numero").value)
+      const romanos = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"]
+      const valores = [1000,900,500,400,100,90,50,40,10,9,5,4,1]
+      let resultado = ""
+      for (let i = 0; i < valores.length; i++) {
+        while (n >= valores[i]) {
+          resultado += romanos[i]
+          n -= valores[i]
+        }
+      }
+      document.getElementById("resultado").innerText = `Romano: ${resultado}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 32: Primos até N -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 32 - Primos até N</title>
+</head>
+<body>
+  <h2>Primos até N</h2>
+  <input type="number" id="n" placeholder="Digite N">
+  <button onclick="gerar()">Gerar</button>
+  <p id="resultado"></p>
+  <script>
+    function ehPrimo(n) {
+      if (n < 2) return false
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false
+      }
+      return true
+    }
+    function gerar() {
+      const n = parseInt(document.getElementById("n").value)
+      const primos = []
+      for (let i = 2; i <= n; i++) {
+        if (ehPrimo(i)) primos.push(i)
+      }
+      document.getElementById("resultado").innerText = `Primos até ${n}: ${primos.join(", ")}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 33: Calcular MDC -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 33 - MDC</title>
+</head>
+<body>
+  <h2>Máximo Divisor Comum</h2>
+  <input type="number" id="a" placeholder="Número A">
+  <input type="number" id="b" placeholder="Número B">
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function mdc(a, b) {
+      while (b !== 0) {
+        const temp = b
+        b = a % b
+        a = temp
+      }
+      return a
+    }
+    function calcular() {
+      const a = parseInt(document.getElementById("a").value)
+      const b = parseInt(document.getElementById("b").value)
+      document.getElementById("resultado").innerText = `MDC: ${mdc(a, b)}`
+    }
+  </script>
+</body>
+</html>
+<!-- EXERCÍCIO 34: Substituir Palavra no Texto -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 34 - Substituir Palavra</title>
+</head>
+<body>
+  <h2>Substituir Palavra</h2>
+  <textarea id="texto" placeholder="Digite um texto..."></textarea><br>
+  <input type="text" id="antiga" placeholder="Palavra a substituir">
+  <input type="text" id="nova" placeholder="Nova palavra">
+  <button onclick="substituir()">Substituir</button>
+  <p id="resultado"></p>
+  <script>
+    function substituir() {
+      const texto = document.getElementById("texto").value
+      const antiga = document.getElementById("antiga").value
+      const nova = document.getElementById("nova").value
+      const novoTexto = texto.replaceAll(antiga, nova)
+      document.getElementById("resultado").innerText = novoTexto
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 35: Caixa Eletrônico - Notas -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 35 - Caixa Eletrônico</title>
+</head>
+<body>
+  <h2>Simular Caixa Eletrônico</h2>
+  <input type="number" id="valor" placeholder="Valor para saque">
+  <button onclick="sacar()">Sacar</button>
+  <p id="resultado"></p>
+  <script>
+    function sacar() {
+      let valor = parseInt(document.getElementById("valor").value)
+      const notas = [100, 50, 20, 10, 5, 2]
+      let resultado = ""
+      for (let nota of notas) {
+        let qtd = Math.floor(valor / nota)
+        if (qtd > 0) {
+          resultado += `${qtd} nota(s) de R$${nota}<br>`
+          valor -= qtd * nota
+        }
+      }
+      document.getElementById("resultado").innerHTML = resultado
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 36: Verificar CPF Válido -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 36 - Verificar CPF</title>
+</head>
+<body>
+  <h2>Verificar CPF</h2>
+  <input type="text" id="cpf" placeholder="Digite o CPF (somente números)">
+  <button onclick="validar()">Validar</button>
+  <p id="resultado"></p>
+  <script>
+    function validar() {
+      let cpf = document.getElementById("cpf").value
+      if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
+        document.getElementById("resultado").innerText = "CPF inválido"
+        return
+      }
+      let soma = 0
+      for (let i = 0; i < 9; i++) soma += parseInt(cpf[i]) * (10 - i)
+      let d1 = 11 - (soma % 11)
+      d1 = d1 > 9 ? 0 : d1
+      if (parseInt(cpf[9]) !== d1) {
+        document.getElementById("resultado").innerText = "CPF inválido"
+        return
+      }
+      soma = 0
+      for (let i = 0; i < 10; i++) soma += parseInt(cpf[i]) * (11 - i)
+      let d2 = 11 - (soma % 11)
+      d2 = d2 > 9 ? 0 : d2
+      document.getElementById("resultado").innerText =
+        parseInt(cpf[10]) === d2 ? "CPF válido" : "CPF inválido"
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 37: Buscar Nome na Lista -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 37 - Buscar Nome</title>
+</head>
+<body>
+  <h2>Buscar Nome</h2>
+  <textarea id="lista" placeholder="Digite nomes separados por vírgula"></textarea><br>
+  <input type="text" id="busca" placeholder="Nome a buscar">
+  <button onclick="buscar()">Buscar</button>
+  <p id="resultado"></p>
+  <script>
+    function buscar() {
+      const nomes = document.getElementById("lista").value.toLowerCase().split(",").map(n => n.trim())
+      const nome = document.getElementById("busca").value.toLowerCase()
+      const achou = nomes.includes(nome)
+      document.getElementById("resultado").innerText = achou ? "Nome encontrado ✅" : "Nome não encontrado ❌"
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 38: Conversor de Moeda -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 38 - Conversor de Moeda</title>
+</head>
+<body>
+  <h2>Conversor de Moeda</h2>
+  <input type="number" id="reais" placeholder="Valor em R$">
+  <button onclick="converter()">Converter</button>
+  <p id="resultado"></p>
+  <script>
+    function converter() {
+      const r = parseFloat(document.getElementById("reais").value)
+      const dolar = (r / 5.0).toFixed(2)
+      const euro = (r / 5.5).toFixed(2)
+      const libra = (r / 6.2).toFixed(2)
+      document.getElementById("resultado").innerText =
+        `US$: ${dolar}, €: ${euro}, £: ${libra}`
+    }
+  </script>
+</body>
+</html>
+<!-- EXERCÍCIO 39: Fatores Primos -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 39 - Fatores Primos</title>
+</head>
+<body>
+  <h2>Fatores Primos</h2>
+  <input type="number" id="numero" placeholder="Digite um número">
+  <button onclick="fatores()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function fatores() {
+      let n = parseInt(document.getElementById("numero").value)
+      const fatores = []
+      for (let i = 2; i <= n; i++) {
+        while (n % i === 0) {
+          fatores.push(i)
+          n /= i
+        }
+      }
+      document.getElementById("resultado").innerText = `Fatores primos: ${fatores.join(", ")}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 40: Cronômetro com Iniciar, Parar e Resetar -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 40 - Cronômetro</title>
+</head>
+<body>
+  <h2>Cronômetro</h2>
+  <p id="tempo">0</p>
+  <button onclick="iniciar()">Iniciar</button>
+  <button onclick="parar()">Parar</button>
+  <button onclick="resetar()">Resetar</button>
+  <script>
+    let contador = 0
+    let intervalo = null
+    function iniciar() {
+      if (intervalo) return
+      intervalo = setInterval(() => {
+        contador++
+        document.getElementById("tempo").innerText = contador
+      }, 1000)
+    }
+    function parar() {
+      clearInterval(intervalo)
+      intervalo = null
+    }
+    function resetar() {
+      parar()
+      contador = 0
+      document.getElementById("tempo").innerText = contador
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 41: Lista de Preços (média, maior, menor) -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 41 - Análise de Preços</title>
+</head>
+<body>
+  <h2>Análise de Preços</h2>
+  <textarea id="precos" placeholder="Ex: 10, 15.5, 22, 8.9"></textarea><br>
+  <button onclick="analisar()">Analisar</button>
+  <p id="resultado"></p>
+  <script>
+    function analisar() {
+      const precos = document.getElementById("precos").value.split(",").map(p => parseFloat(p.trim()))
+      const maior = Math.max(...precos)
+      const menor = Math.min(...precos)
+      const media = (precos.reduce((a, b) => a + b, 0) / precos.length).toFixed(2)
+      document.getElementById("resultado").innerText = `Maior: R$${maior}, Menor: R$${menor}, Média: R$${media}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 42: Lista de Temperaturas (maior, menor e média) -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 42 - Análise de Temperaturas</title>
+</head>
+<body>
+  <h2>Análise de Temperaturas</h2>
+  <textarea id="temps" placeholder="Ex: 30, 28.5, 32, 27"></textarea><br>
+  <button onclick="analisar()">Analisar</button>
+  <p id="resultado"></p>
+  <script>
+    function analisar() {
+      const temps = document.getElementById("temps").value.split(",").map(t => parseFloat(t.trim()))
+      const maior = Math.max(...temps)
+      const menor = Math.min(...temps)
+      const media = (temps.reduce((a, b) => a + b, 0) / temps.length).toFixed(2)
+      document.getElementById("resultado").innerText = `Maior: ${maior}°C, Menor: ${menor}°C, Média: ${media}°C`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 43: Velocidade Média -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 43 - Velocidade Média</title>
+</head>
+<body>
+  <h2>Velocidade Média</h2>
+  <input type="number" id="distancia" placeholder="Distância (km)">
+  <input type="number" id="tempo" placeholder="Tempo (h)">
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+  <script>
+    function calcular() {
+      const d = parseFloat(document.getElementById("distancia").value)
+      const t = parseFloat(document.getElementById("tempo").value)
+      const v = (d / t).toFixed(2)
+      document.getElementById("resultado").innerText = `Velocidade média: ${v} km/h`
+    }
+  </script>
+</body>
+</html>
+<!-- EXERCÍCIO 44: Divisores de um Número -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 44 - Divisores</title>
+</head>
+<body>
+  <h2>Divisores de um Número</h2>
+  <input type="number" id="numero" placeholder="Digite um número">
+  <button onclick="mostrar()">Mostrar</button>
+  <p id="resultado"></p>
+  <script>
+    function mostrar() {
+      const n = parseInt(document.getElementById("numero").value)
+      const divisores = []
+      for (let i = 1; i <= n; i++) {
+        if (n % i === 0) divisores.push(i)
+      }
+      document.getElementById("resultado").innerText = `Divisores: ${divisores.join(", ")}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 45: Ordenar em Ordem Decrescente -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 45 - Ordem Decrescente</title>
+</head>
+<body>
+  <h2>Ordenar Números em Ordem Decrescente</h2>
+  <input type="text" id="numeros" placeholder="Ex: 5,8,2,9">
+  <button onclick="ordenar()">Ordenar</button>
+  <p id="resultado"></p>
+  <script>
+    function ordenar() {
+      const lista = document.getElementById("numeros").value.split(",").map(n => parseFloat(n.trim())).sort((a,b) => b - a)
+      document.getElementById("resultado").innerText = `Ordem decrescente: ${lista.join(", ")}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 46: Formulário de Contato com Validação -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 46 - Formulário com Validação</title>
+</head>
+<body>
+  <h2>Formulário de Contato</h2>
+  <input type="text" id="nome" placeholder="Nome"><br>
+  <input type="email" id="email" placeholder="Email"><br>
+  <textarea id="mensagem" placeholder="Mensagem"></textarea><br>
+  <button onclick="enviar()">Enviar</button>
+  <p id="resultado"></p>
+  <script>
+    function enviar() {
+      const nome = document.getElementById("nome").value.trim()
+      const email = document.getElementById("email").value.trim()
+      const mensagem = document.getElementById("mensagem").value.trim()
+
+      if (!nome || !email || !mensagem) {
+        document.getElementById("resultado").innerText = "Por favor, preencha todos os campos."
+      } else {
+        document.getElementById("resultado").innerText = "Mensagem enviada com sucesso!"
+      }
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 47: Notas - Maior, Menor, Média -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 47 - Análise de Notas</title>
+</head>
+<body>
+  <h2>Notas</h2>
+  <input type="text" id="notas" placeholder="Ex: 8.5, 9, 7, 10">
+  <button onclick="analisar()">Analisar</button>
+  <p id="resultado"></p>
+  <script>
+    function analisar() {
+      const notas = document.getElementById("notas").value.split(",").map(n => parseFloat(n.trim()))
+      const maior = Math.max(...notas)
+      const menor = Math.min(...notas)
+      const media = (notas.reduce((a,b) => a + b, 0) / notas.length).toFixed(2)
+      document.getElementById("resultado").innerText = `Maior: ${maior}, Menor: ${menor}, Média: ${media}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 48: Frequência de Letras -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 48 - Frequência de Letras</title>
+</head>
+<body>
+  <h2>Frequência de Letras</h2>
+  <textarea id="texto" placeholder="Digite um texto..."></textarea><br>
+  <button onclick="contar()">Contar</button>
+  <pre id="resultado"></pre>
+  <script>
+    function contar() {
+      const texto = document.getElementById("texto").value.toLowerCase().replace(/[^a-z]/g, "")
+      const freq = {}
+      for (let letra of texto) {
+        freq[letra] = (freq[letra] || 0) + 1
+      }
+      let resultado = ""
+      for (let letra in freq) {
+        resultado += `${letra.toUpperCase()}: ${freq[letra]}\n`
+      }
+      document.getElementById("resultado").innerText = resultado
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 49: Valor Absoluto -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 49 - Valor Absoluto</title>
+</head>
+<body>
+  <h2>Valor Absoluto</h2>
+  <input type="number" id="numero" placeholder="Digite um número">
+  <button onclick="mostrar()">Mostrar</button>
+  <p id="resultado"></p>
+  <script>
+    function mostrar() {
+      const n = parseFloat(document.getElementById("numero").value)
+      document.getElementById("resultado").innerText = `Valor absoluto: ${Math.abs(n)}`
+    }
+  </script>
+</body>
+</html>
+
+<!-- EXERCÍCIO 50: Dia da Semana de uma Data -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 50 - Dia da Semana</title>
+</head>
+<body>
+  <h2>Descobrir o Dia da Semana</h2>
+  <input type="date" id="data">
+  <button onclick="descobrir()">Ver</button>
+  <p id="resultado"></p>
+  <script>
+    function descobrir() {
+      const dias = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"]
+      const data = new Date(document.getElementById("data").value)
+      const diaSemana = dias[data.getDay()]
+      document.getElementById("resultado").innerText = `Dia da semana: ${diaSemana}`
+    }
+  </script>
+</body>
+</html>

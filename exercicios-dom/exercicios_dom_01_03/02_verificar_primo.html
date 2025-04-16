@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificar se é Primo</title>
+</head>
+<body>
+
+<h2>Verificar Número Primo</h2>
+<input type="number" id="numero" placeholder="Digite um número">
+<button onclick="verificarPrimo()">Verificar</button>
+<p id="resultado"></p>
+
+<script>
+  function verificarPrimo() {
+    const num = parseInt(document.getElementById("numero").value)
+    if (num < 2) return document.getElementById("resultado").innerText = "Não é primo"
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        document.getElementById("resultado").innerText = "Não é primo"
+        return
+      }
+    }
+    document.getElementById("resultado").innerText = "É primo"
+  }
+</script>
+
+</body>
+</html>

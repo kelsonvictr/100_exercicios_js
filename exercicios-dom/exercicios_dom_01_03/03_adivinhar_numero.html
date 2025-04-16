@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Adivinhar Número</title>
+</head>
+<body>
+
+<h2>Jogo: Adivinhe o número entre 1 e 100</h2>
+<input type="number" id="tentativa" placeholder="Digite sua tentativa">
+<button onclick="adivinhar()">Tentar</button>
+<p id="mensagem"></p>
+
+<script>
+  const numeroSecreto = Math.floor(Math.random() * 100) + 1
+  function adivinhar() {
+    const tentativa = parseInt(document.getElementById("tentativa").value)
+    let msg = ""
+    if (tentativa > numeroSecreto) msg = "Muito alto!"
+    else if (tentativa < numeroSecreto) msg = "Muito baixo!"
+    else msg = "Parabéns! Você acertou!"
+    document.getElementById("mensagem").innerText = msg
+  }
+</script>
+
+</body>
+</html>
