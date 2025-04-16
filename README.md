@@ -1,5 +1,8 @@
 ## Praticar JS puro: (100 questões)
 
+![image](https://github.com/user-attachments/assets/84518ba0-1237-45ee-ab49-64f08b47e7c4)
+
+
 1 - Crie um script que tenha três variáveis:
 ```js
 var nome;
